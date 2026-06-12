@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        -45deg,
+        #667eea,
+        #764ba2,
+        #4facfe,
+        #00f2fe
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    padding: 20px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    color: white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.15);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+#question {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.answer-btn,
+#startBtn,
+#restartBtn {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.answer-btn {
+    background: linear-gradient(135deg,#ff6b6b,#ff9f43);
+}
+
+#startBtn {
+    background: linear-gradient(135deg,#00c853,#64dd17);
+}
+
+#restartBtn {
+    background: linear-gradient(135deg,#2979ff,#00b0ff);
+}
+
+.answer-btn:hover,
+#startBtn:hover,
+#restartBtn:hover {
+    transform: translateY(-3px);
+}
+
+.hidden {
+    display: none;
+}
+
+#result h2 {
+    margin-bottom: 15px;
+}
+
+#finalScore {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+
+    .quiz-container {
+        padding: 20px;
+    }
+
+    #status {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #question {
+        font-size: 1.1rem;
+    }
+}
